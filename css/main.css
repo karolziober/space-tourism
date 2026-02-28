@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* COLORS */
+:root {
+  --color-blue-900: #0b0d17;
+  --color-blue-300: #d0d6f9;
+  --color-white: #ffffff;
+
+  /* FONT FAMILIES */
+
+  --font-bellefair: "Bellefair", serif;
+  --font-barlow-condensed: "Barlow Condensed", sans-serif;
+  --font-barlow: "Barlow", sans-serif;
+
+  /* TEXT PRESETS */
+  /* Preset 1 — Bellefair Regular */
+  --font-preset-1-family: var(--font-bellefair);
+  --font-preset-1-size: 144px;
+  --font-preset-1-line-height: 1.719;
+  --font-preset-1-spacing: 0px;
+  --font-preset-1-weight: 400;
+
+  /* Preset 2 — Bellefair Regular */
+  --font-preset-2-family: var(--font-bellefair);
+  --font-preset-2-size: 100px;
+  --font-preset-2-line-height: 1.146;
+  --font-preset-2-spacing: 0px;
+  --font-preset-2-weight: 400;
+
+  /* Preset 3 — Bellefair Regular */
+  --font-preset-3-family: var(--font-bellefair);
+  --font-preset-3-size: 56px;
+  --font-preset-3-line-height: 1.142;
+  --font-preset-3-spacing: 0px;
+  --font-preset-3-weight: 400;
+
+  /* Preset 4 — Bellefair Regular */
+  --font-preset-4-family: var(--font-bellefair);
+  --font-preset-4-size: 32px;
+  --font-preset-4-line-height: 1.147;
+  --font-preset-4-spacing: 0px;
+  --font-preset-4-weight: 400;
+
+  /* Preset 5 — Barlow Condensed Regular */
+  --font-preset-5-family: var(--font-barlow-condensed);
+  --font-preset-5-size: 28px;
+  --font-preset-5-line-height: 1.2;
+  --font-preset-5-spacing: 4px;
+  --font-preset-5-weight: 400;
+
+  /* Preset 6 — Bellefair Regular */
+  --font-preset-6-family: var(--font-bellefair);
+  --font-preset-6-size: 28px;
+  --font-preset-6-line-height: 1.146;
+  --font-preset-6-spacing: 0px;
+  --font-preset-6-weight: 400;
+
+  /* Preset 7 — Barlow Condensed Regular */
+  --font-preset-7-family: var(--font-barlow-condensed);
+  --font-preset-7-size: 14px;
+  --font-preset-7-line-height: 1.2;
+  --font-preset-7-spacing: 2px;
+  --font-preset-7-weight: 400;
+
+  /* Preset 8 — Barlow Condensed Regular */
+  --font-preset-8-family: var(--font-barlow-condensed);
+  --font-preset-8-size: 16px;
+  --font-preset-8-line-height: 1.2;
+  --font-preset-8-spacing: 2px;
+  --font-preset-8-weight: 400;
+
+  /* Preset 9 — Barlow Regular */
+  --font-preset-9-family: var(--font-barlow);
+  --font-preset-9-size: 18px;
+  --font-preset-9-line-height: 1.8;
+  --font-preset-9-spacing: 0px;
+  --font-preset-9-weight: 400;
+}
+
+body {
+  min-height: 100vh;
+}
