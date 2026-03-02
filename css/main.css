@@ -72,6 +72,7 @@
   --font-preset-8-line-height: 1.2;
   --font-preset-8-spacing: 2px;
   --font-preset-8-weight: 400;
+  --font-preset-8-bold: 800;
 
   /* Preset 9 — Barlow Regular */
   --font-preset-9-family: var(--font-barlow);
@@ -83,4 +84,97 @@
 
 body {
   min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block-start: 1.5rem;
+  padding-inline: 1.5rem;
+  padding-block-end: 1.5rem;
+  /* width: 100%; */
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav__panel {
+  display: none;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__panel--open {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #ffffff; */
+  background-color: rgb(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 65%;
+  padding-block-start: 2rem;
+
+  gap: 4rem;
+}
+
+.nav__close,
+.nav__open {
+  background-color: transparent;
+  border: 0;
+}
+
+.nav__close {
+  align-self: flex-end;
+  padding-inline-end: 1.5rem;
+}
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 2rem;
+  gap: 2rem;
+}
+.nav__element {
+  list-style-type: none;
+}
+
+.nav__link {
+  font-family: var(--font-preset-8-family);
+  font-size: var(--font-preset-8-size);
+  font-weight: var(--font-preset-8-weight);
+  letter-spacing: var(--font-preset-8-spacing);
+  line-height: var(--font-preset-8-line-height);
+  display: flex;
+  gap: 0.5rem;
+  color: var(--color-white);
+}
+
+.nav__element:hover {
+  border-right: 3px solid white;
+}
+
+.nav__number {
+  font-weight: var(--font-preset-8-bold);
+}
+/* .nav__hamburger {
+  display: block;
+  justify-self: right;
+} */
+
+section {
+  color: white;
+  padding: 1.5rem;
 }
