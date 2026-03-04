@@ -41,7 +41,7 @@
           </svg>
         </a>
         <nav class="nav">
-          <button class="nav__open" type="button">
+          <button class="nav__btn nav__open" type="button" id="nav-open">
             <!-- HAMBURGER BUTTON -->
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21">
               <g fill="#D0D6F9" fill-rule="evenodd">
@@ -49,8 +49,8 @@
               </g>
             </svg>
           </button>
-          <div class="nav__panel--open">
-            <button class="nav__close" type="button">
+          <div class="nav__panel">
+            <button class="nav__btn nav__close" type="button" id="nav-close">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21">
                 <g fill="#D0D6F9" fill-rule="evenodd">
                   <path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z" />
@@ -83,15 +83,20 @@
           </div>
         </nav>
       </header>
-      <section>
-        <p>So, you want to travel to Space</p>
-        <h1>SPACE</h1>
-        <span
-          >Let’s face it; if you want to go to space, you might as well
-          genuinely go to outer space and not hover kind of on the edge of it.
-          Well sit back, and relax because we’ll give you a truly out of this
-          world experience!
-        </span>
+      <section class="content">
+        <div class="content__text">
+          <p class="content__paragraph">SO, YOU WANT TO TRAVEL TO</p>
+          <h1 class="content__header">SPACE</h1>
+          <span class="content__description"
+            >Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </span>
+        </div>
+        <button class="content__explore" type="button" id="explore">
+          EXPLORE
+        </button>
       </section>
     </main>
     <!-- 00 Home 01 Destination 02 Crew 03 Technology So, you want to travel to Space

@@ -19,7 +19,7 @@
   /* TEXT PRESETS */
   /* Preset 1 — Bellefair Regular */
   --font-preset-1-family: var(--font-bellefair);
-  --font-preset-1-size: 144px;
+  --font-preset-1-size: clamp(64px, 5vw, 144px);
   --font-preset-1-line-height: 1.719;
   --font-preset-1-spacing: 0px;
   --font-preset-1-weight: 400;
@@ -40,14 +40,14 @@
 
   /* Preset 4 — Bellefair Regular */
   --font-preset-4-family: var(--font-bellefair);
-  --font-preset-4-size: 32px;
+  --font-preset-4-size: clamp(18px, 2vw, 32px);
   --font-preset-4-line-height: 1.147;
   --font-preset-4-spacing: 0px;
   --font-preset-4-weight: 400;
 
   /* Preset 5 — Barlow Condensed Regular */
   --font-preset-5-family: var(--font-barlow-condensed);
-  --font-preset-5-size: 28px;
+  --font-preset-5-size: clamp(14px, 2vw, 28px);
   --font-preset-5-line-height: 1.2;
   --font-preset-5-spacing: 4px;
   --font-preset-5-weight: 400;
@@ -76,7 +76,7 @@
 
   /* Preset 9 — Barlow Regular */
   --font-preset-9-family: var(--font-barlow);
-  --font-preset-9-size: 18px;
+  --font-preset-9-size: clamp(16px, 2vw, 18px);
   --font-preset-9-line-height: 1.8;
   --font-preset-9-spacing: 0px;
   --font-preset-9-weight: 400;
@@ -96,6 +96,13 @@ header {
   /* width: 100%; */
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* flex: 1; */
+}
+
 nav {
   display: flex;
   flex-direction: column;
@@ -105,20 +112,18 @@ nav {
 a {
   text-decoration: none;
 }
-
-.nav__panel {
-  display: none;
-}
-
 .logo {
   width: 40px;
   height: 40px;
 }
+/* .nav__panel {
+  display: none;
+} */
 
-.nav__panel--open {
+.nav__panel {
   display: flex;
   flex-direction: column;
-  /* background-color: #ffffff; */
+  position: fixed;
   background-color: rgb(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   position: fixed;
@@ -127,14 +132,23 @@ a {
   height: 100vh;
   width: 65%;
   padding-block-start: 2rem;
-
   gap: 4rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in;
+}
+
+.nav__panel--open {
+  transform: translateX(0);
 }
 
 .nav__close,
 .nav__open {
   background-color: transparent;
   border: 0;
+}
+
+.nav__open--hidden {
+  display: none;
 }
 
 .nav__close {
@@ -158,6 +172,7 @@ a {
   letter-spacing: var(--font-preset-8-spacing);
   line-height: var(--font-preset-8-line-height);
   display: flex;
+  width: fit-content;
   gap: 0.5rem;
   color: var(--color-white);
 }
@@ -169,12 +184,35 @@ a {
 .nav__number {
   font-weight: var(--font-preset-8-bold);
 }
-/* .nav__hamburger {
-  display: block;
-  justify-self: right;
-} */
 
 section {
   color: white;
   padding: 1.5rem;
+}
+
+.content__header {
+  font-family: var(--font-preset-1-family);
+  font-size: var(--font-preset-1-size);
+  font-weight: var(--font-preset-1-weight);
+  letter-spacing: var(--font-preset-1-spacing);
+  line-height: var(--font-preset-1-line-height);
+}
+
+.content__paragraph {
+  font-family: var(--font-preset-5-family);
+  font-size: var(--font-preset-5-size);
+  font-weight: var(--font-preset-5-weight);
+  letter-spacing: var(--font-preset-5-spacing);
+  line-height: var(--font-preset-5-line-height);
+  color: var(--color-blue-300);
+}
+
+.content__description {
+  font-family: var(--font-preset-9-family);
+  font-size: var(--font-preset-9-size);
+  font-weight: var(--font-preset-9-weight);
+  letter-spacing: var(--font-preset-9-spacing);
+  line-height: var(--font-preset-9-line-height);
+  color: var(--color-blue-300);
+  text-align: center;
 }
