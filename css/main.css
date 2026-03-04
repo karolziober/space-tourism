@@ -47,7 +47,7 @@
 
   /* Preset 5 — Barlow Condensed Regular */
   --font-preset-5-family: var(--font-barlow-condensed);
-  --font-preset-5-size: clamp(14px, 2vw, 28px);
+  --font-preset-5-size: clamp(16px, 2vw, 28px);
   --font-preset-5-line-height: 1.2;
   --font-preset-5-spacing: 4px;
   --font-preset-5-weight: 400;

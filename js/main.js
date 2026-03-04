@@ -6,6 +6,7 @@ class Main {
     this.menuOpenBtn = document.getElementById("nav-open");
     this.menuCloseBtn = document.getElementById("nav-close");
     this.menuBtns = document.querySelectorAll(".nav__btn");
+    this.exploreBtn = document.getElementById("explore");
 
     // ELEMENTS
     this.menu = document.querySelector(".nav__panel");
